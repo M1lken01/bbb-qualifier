@@ -94,7 +94,27 @@ section > h2 {
 }
 
 section > div {
-  @apply flex gap-4;
+  @apply flex flex-col gap-4;
+}
+
+.card {
+  @apply flex items-center justify-center w-32 h-32 text-3xl hover:cursor-pointer;
+}
+
+#game > div {
+  @apply w-8 h-8 text-center border border-solid border-zinc-100 hover:!border-red-700;
+}
+
+[data-darkmode='true'] #game > div {
+  @apply border-zinc-900;
+}
+
+[data-owner='0'] {
+  @apply text-blue-700;
+}
+
+[data-owner='1'] {
+  @apply text-red-700;
 }
 
 @keyframes gradient-animation {

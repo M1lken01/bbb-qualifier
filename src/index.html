@@ -18,7 +18,7 @@
       </div>
       <section id="task1">
         <h2>1. Kevesebb osztó</h2>
-        <div class="flex-col">
+        <div>
           <div class="flex gap-4">
             <input id="input-number" type="number" placeholder="Enter a number (2-100)" min="2" max="100" />
             <button class="button" onclick="calculate()">Számít</button>
@@ -28,7 +28,7 @@
       </section>
       <section id="task2">
         <h2>2. Bittérkép rajzoló</h2>
-        <div class="flex-col">
+        <div>
           <div class="flex gap-4">
             <textarea id="map-input" placeholder="Paste map data"></textarea>
             <button class="button" onclick="drawMap()">Rajzol</button>
@@ -38,7 +38,7 @@
       </section>
       <section id="task3">
         <h2>3. Lottó sorsolás</h2>
-        <div class="flex-col">
+        <div>
           <div class="flex gap-4">
             <input id="draw-count" type="number" placeholder="Számokból húz" />
             <input id="pick-count" type="number" placeholder="Hányat" />
@@ -50,13 +50,13 @@
       </section>
       <section id="task4">
         <h2>4. Körbekerítős játék</h2>
-        <div>
-          <span>skip</span>
+        <div class="flex-row">
+          <div id="game" class="grid grid-cols-7 grid-rows-7"></div>
         </div>
       </section>
       <section id="task5">
         <h2>5. Bit statisztikák</h2>
-        <div class="flex-col">
+        <div>
           <div class="flex gap-4">
             <input type="text" id="binaryInput" placeholder="0 és 1 karakterek" />
             <button class="button" onclick="evaluateBinary()">Értékelés</button>
@@ -68,8 +68,8 @@
       </section>
       <section id="task6">
         <h2>6. Memória játék</h2>
-        <div>
-          <div id="game-board" style="display: grid; grid-template-columns: repeat(4, 100px); gap: 10px"></div>
+        <div class="flex-row">
+          <div id="game-board" class="grid grid-cols-4 grid-rows-4 gap-4"></div>
         </div>
       </section>
     </div>

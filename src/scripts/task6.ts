@@ -21,12 +21,6 @@ function renderBoard() {
   cards.forEach((card, index) => {
     const cardElement = document.createElement('div');
     cardElement.className = 'card';
-    cardElement.style.width = '100px';
-    cardElement.style.height = '100px';
-    cardElement.style.display = 'flex';
-    cardElement.style.alignItems = 'center';
-    cardElement.style.justifyContent = 'center';
-    cardElement.style.fontSize = '2em';
     cardElement.style.backgroundColor = card.isMatched || card === firstCard || card === secondCard ? 'lightgreen' : 'lightgray';
     cardElement.innerText = card.isMatched || card === firstCard || card === secondCard ? card.symbol : '';
     cardElement.onclick = () => flipCard(index);
@@ -58,7 +52,7 @@ function checkMatch() {
       setTimeout(() => {
         resetTurn();
         renderBoard();
-      }, 1000); // Flip back after 1 second if no match
+      }, 1000);
     }
   }
 }
