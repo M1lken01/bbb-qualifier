@@ -12,10 +12,66 @@
     <header class="flex text-white bg-zinc-900">
       <a class="p-8 hover:text-zinc-400" href="index.html">Qualifier</a>
     </header>
-    <div class="flex flex-col items-center flex-1 m-8">
+    <div class="flex flex-col items-center flex-1 gap-8 m-8">
       <div class="flex flex-col items-center justify-start">
         <h1 class="text-6xl font-bold">Qualifier</h1>
       </div>
+      <section id="task1">
+        <h2>1. Kevesebb osztó</h2>
+        <div class="flex-col">
+          <div class="flex gap-4">
+            <input id="input-number" type="number" placeholder="Enter a number (2-100)" min="2" max="100" />
+            <button class="button" onclick="calculate()">Számít</button>
+          </div>
+          <div id="numbers-result"></div>
+        </div>
+      </section>
+      <section id="task2">
+        <h2>2. Bittérkép rajzoló</h2>
+        <div class="flex-col">
+          <div class="flex gap-4">
+            <textarea id="map-input" placeholder="Paste map data"></textarea>
+            <button class="button" onclick="drawMap()">Rajzol</button>
+          </div>
+          <div id="map-output"></div>
+        </div>
+      </section>
+      <section id="task3">
+        <h2>3. Lottó sorsolás</h2>
+        <div class="flex-col">
+          <div class="flex gap-4">
+            <input id="draw-count" type="number" placeholder="Számokból húz" />
+            <input id="pick-count" type="number" placeholder="Hányat" />
+            <input id="user-numbers" type="text" placeholder="Enter your numbers, separated by commas" />
+            <button class="button" onclick="drawLottery()">Sorsol</button>
+          </div>
+          <div id="lottery-result"></div>
+        </div>
+      </section>
+      <section id="task4">
+        <h2>4. Körbekerítős játék</h2>
+        <div>
+          <span>skip</span>
+        </div>
+      </section>
+      <section id="task5">
+        <h2>5. Bit statisztikák</h2>
+        <div class="flex-col">
+          <div class="flex gap-4">
+            <input type="text" id="binaryInput" placeholder="0 és 1 karakterek" />
+            <button class="button" onclick="evaluateBinary()">Értékelés</button>
+            <input type="number" id="randomLength" placeholder="Hossz" />
+            <button class="button" onclick="generateRandomBinary()">Véletlen generálása</button>
+          </div>
+          <div id="results"></div>
+        </div>
+      </section>
+      <section id="task6">
+        <h2>6. Memória játék</h2>
+        <div>
+          <div id="game-board" style="display: grid; grid-template-columns: repeat(4, 100px); gap: 10px"></div>
+        </div>
+      </section>
     </div>
     <footer class="flex flex-col items-center justify-center p-16 text-white bg-zinc-900">
       <p>
@@ -24,5 +80,11 @@
       <p>&copy; 2024 M&amp;M. Minden jog fenntartva.</p>
       <p>Készítette: M&amp;M | <a href="https://github.com/M1lken01/bbb-qualifier" class="link">github</a></p>
     </footer>
+    <script src="./scripts/task1.js"></script>
+    <script src="./scripts/task2.js"></script>
+    <script src="./scripts/task3.js"></script>
+    <script src="./scripts/task4.js"></script>
+    <script src="./scripts/task5.js"></script>
+    <script src="./scripts/task6.js"></script>
   </body>
 </html>
